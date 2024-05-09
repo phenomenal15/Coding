@@ -1,0 +1,42 @@
+import java.util.*;// Online Java Compiler
+//  prime number whose sum of the digits is also a prime number (n to m)
+
+class HelloWorld {
+    public static void main(String[] args) {
+       
+        Scanner in = new Scanner(System.in);
+        
+        int m=in.nextInt();
+         int n=in.nextInt();
+         for(int i=m;i<=n;i++)
+         {   int c=0;
+        //  System.out.println("i= "+i);
+             for(int j=1;j<=i;j++)
+         { // System.out.println("j= "+j);
+             if(i%j==0)
+             c++;
+         }
+         if (c==2)
+         { //System.out.println("hiiii");
+             int t=i;
+             int sum=0;;
+             while(t>0)
+         {
+         int r=t%10;
+         sum+=r;
+         t=t/10;
+    
+         }
+         int y=0;
+          for(int o=1;o<=sum;o++)
+         {
+             if(sum%o==0)
+             y++;
+         }
+         if (y==2)
+         {System.out.println(i);}
+    
+         }
+        
+}
+    }
